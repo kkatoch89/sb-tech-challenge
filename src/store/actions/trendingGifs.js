@@ -13,7 +13,7 @@ const ageRating = 'g';
 export const fetchedGifsSuccess = (data) => {
 	return {
 		type: actionTypes.FETCHED_GIFS_SUCCESS,
-		readings: { ...data },
+		gifsData: { ...data },
 	};
 };
 
@@ -24,6 +24,7 @@ export const fetchTrendingGifs = () => {
 			.get(`trending?api_key=${apiKey}&limit=${fetchLimit}&rating=${ageRating}`)
 			.then(({ data }) => {
 				console.log(data.data);
+				dispatch(fetchedGifsSuccess(data));
 			})
 			.catch((error) => {
 				console.log(error.message);

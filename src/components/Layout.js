@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const LayoutStyles = styled.div`
 	.wrapper {
-		max-width: 1200px;
+		max-width: 1400px;
 		min-height: 120vh;
 		margin: 0 auto;
 		text-align: center;
