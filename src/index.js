@@ -8,6 +8,7 @@ import {
 } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
+import trendingGifsReducer from './store/reducers/trendingGifs';
 
 import App from './App';
 
@@ -22,6 +23,7 @@ if (process.env.NODE_ENV === 'development') {
 
 const rootReducer = combineReducers({
 	// Reducers here
+	trendingGifs: trendingGifsReducer,
 });
 
 const store = createStore(

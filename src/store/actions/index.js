@@ -1,0 +1,1 @@
+export { fetchTrendingGifs } from './trendingGifs';
