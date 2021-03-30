@@ -1,1 +1,1 @@
-export { fetchTrendingGifs } from './trendingGifs';
+export { fetchTrendingGifs, toggleModal } from './trendingGifs';

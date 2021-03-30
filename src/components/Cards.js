@@ -19,6 +19,9 @@ const Cards = (props) => {
 						url={el.images.downsized_medium.url}
 						key={el.id}
 						title={el.title}
+						onClickHandler={(e) =>
+							props.onClickHandler(el.images.downsized_medium.url, true)
+						}
 					/>
 				);
 			})}

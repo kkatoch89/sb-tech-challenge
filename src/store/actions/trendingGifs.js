@@ -23,11 +23,21 @@ export const fetchTrendingGifs = () => {
 		axios
 			.get(`trending?api_key=${apiKey}&limit=${fetchLimit}&rating=${ageRating}`)
 			.then(({ data }) => {
-				console.log(data.data);
 				dispatch(fetchedGifsSuccess(data));
 			})
 			.catch((error) => {
 				console.log(error.message);
 			});
+	};
+};
+
+/**************************************
+	MODAL CONTROLS
+**************************************/
+
+export const toggleModal = (url, modalState) => {
+	return {
+		type: actionTypes.TOGGLE_MODAL,
+		modalUpdate: { url: url, open: modalState },
 	};
 };

@@ -4,6 +4,7 @@ import 'normalize.css';
 import styled from 'styled-components';
 
 const LayoutStyles = styled.div`
+	background-color: var(--background);
 	.wrapper {
 		max-width: 1400px;
 		min-height: 120vh;
